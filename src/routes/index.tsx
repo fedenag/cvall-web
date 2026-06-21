@@ -2,8 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { FadeUp } from "@/components/FadeUp";
 import heroImg from "@/assets/hero.jpg";
-import portraitReal from "@/assets/cvall-portrait.png.asset.json";
-import atelierReal from "@/assets/atelier-real.jpg.asset.json";
 import art1 from "@/assets/art1.jpg";
 import art2 from "@/assets/art2.jpg";
 import art3 from "@/assets/art3.jpg";
@@ -335,18 +333,18 @@ function About() {
           </p>
         </FadeUp>
         <FadeUp delay={150} className="order-1 lg:order-2">
-          <div className="space-y-6">
+          <div className="grid grid-cols-2 gap-4 items-end">
             <img
-              src={portraitReal.url}
+              src="/assets/cvall imagen.png"
               alt="Valeria Candiago en su atelier"
               loading="lazy"
-              className="w-full aspect-[4/5] object-cover"
+              className="w-full aspect-[3/4] object-cover"
             />
             <img
-              src={atelierReal.url}
+              src="/assets/atardecer.jpg"
               alt="Atardecer desde el atelier de campo"
               loading="lazy"
-              className="w-2/3 ml-auto aspect-[4/3] object-cover"
+              className="w-full aspect-[4/3] object-cover"
             />
           </div>
         </FadeUp>
