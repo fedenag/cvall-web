@@ -333,9 +333,9 @@ function About() {
           </p>
         </FadeUp>
         <FadeUp delay={150} className="order-1 lg:order-2">
-          <div className="grid grid-cols-2 gap-4 items-end">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-end">
             <img
-              src="/assets/cvall imagen.png"
+              src="/assets/cvall-imagen.png"
               alt="Valeria Candiago en su atelier"
               loading="lazy"
               className="w-full aspect-[3/4] object-cover"
