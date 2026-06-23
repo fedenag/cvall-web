@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { FadeUp } from "@/components/FadeUp";
-import heroImg from "@/assets/hero.jpg";
+import heroImg from "@/assets/hero.png";
 import cuadro1 from "@/assets/cuadro-1.jpg";
 import cuadro2 from "@/assets/cuadro-2.jpg";
 import cuadro3 from "@/assets/cuadro-3.jpg";
