@@ -103,18 +103,17 @@ function Hero() {
         </FadeUp>
         <FadeUp>
           <p className="eyebrow text-terracotta mb-6">
-            Arte original · Buenos Aires, Argentina
+            Samborombón, Buenos Aires
           </p>
         </FadeUp>
         <FadeUp delay={150}>
           <h1 className="text-cream font-serif text-5xl sm:text-6xl lg:text-8xl leading-[0.95] max-w-4xl">
-            Arte que visita<br />tu hogar
+            El arte no debería<br />quedarse quieto.
           </h1>
         </FadeUp>
         <FadeUp delay={300}>
           <p className="text-cream/85 mt-8 text-lg lg:text-xl max-w-xl font-light leading-relaxed">
-            Suscribite y recibí una obra original de Cvall cada 6 meses.
-            Envío incluido. Sin compromisos.
+            Obras que circulan. Hogares que cambian. Huellas que quedan.
           </p>
         </FadeUp>
         <FadeUp delay={450}>
@@ -123,7 +122,7 @@ function Hero() {
               href="#suscripcion"
               className="inline-flex items-center justify-center bg-terracotta hover:bg-terracotta-dark text-cream px-8 py-4 text-sm tracking-[0.18em] uppercase rounded-[2px] transition-colors"
             >
-              Quiero suscribirme
+              Quiero una obra en mi hogar
             </a>
             <a
               href="#galeria"
@@ -138,21 +137,61 @@ function Hero() {
   );
 }
 
+function Concept() {
+  return (
+    <section className="bg-cream-deep py-28 lg:py-40">
+      <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center">
+        <FadeUp>
+          <h2 className="text-charcoal font-serif text-4xl lg:text-6xl leading-tight mb-12">
+            Nada de lo que pinto existe.<br />Por eso te obliga a crear algo adentro tuyo.
+          </h2>
+        </FadeUp>
+        <FadeUp delay={150}>
+          <div className="text-charcoal/85 text-lg lg:text-xl font-light leading-relaxed space-y-6">
+            <p>
+              El arte abstracto no te muestra el mundo.<br />
+              Te muestra lo que vos sos cuando lo mirás.
+            </p>
+            <p>
+              Cvall nació de una convicción simple: el arte no debería vivir<br />
+              en depósitos ni en galerías que poca gente visita.<br />
+              Debería circular. Entrar a casas. Cambiar paredes. Moverse.
+            </p>
+            <p>
+              Una obra en residencia en tu hogar durante 6 meses.<br />
+              Después llega otra. Y la que se va, visita a alguien más.
+            </p>
+            <p>
+              Así es como algo hecho en un taller de campo termina dejando<br />
+              huella en lugares que nunca imaginé.
+            </p>
+          </div>
+        </FadeUp>
+      </div>
+    </section>
+  );
+}
+
 const steps = [
   {
     n: "01",
-    title: "Elegís una obra",
-    body: "Explorá la galería y seleccioná la obra que quieras tener en tu hogar por los próximos 6 meses.",
+    title: "Elegís",
+    body: "Entrás a la galería y seleccionás la obra que algo te dice que es tuya por ahora.",
   },
   {
     n: "02",
-    title: "La recibís en tu casa",
-    body: "Enviamos el cuadro en su caja de transporte reutilizable, protegido y listo para colgar. El envío corre por nuestra cuenta.",
+    title: "Llega",
+    body: "La enviamos protegida en su caja. Lista para colgar. Sin vueltas.",
   },
   {
     n: "03",
-    title: "A los 6 meses, rotamos",
-    body: "Te contactamos para coordinar la devolución y elegís tu próxima obra. La caja viene de vuelta con el nuevo cuadro.",
+    title: "Convivís",
+    body: "Seis meses con esa obra en tu pared. Mirándola de día, de noche, sola, acompañada. Dejando que haga lo suyo.",
+  },
+  {
+    n: "04",
+    title: "Rota",
+    body: "Coordinamos la devolución y viene la siguiente. La que se va sigue viajando.",
   },
 ];
 
@@ -162,9 +201,9 @@ function HowItWorks() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <FadeUp>
           <p className="eyebrow mb-6">El proceso</p>
-          <h2 className="text-charcoal text-4xl lg:text-6xl max-w-2xl">Así funciona</h2>
+          <h2 className="text-charcoal text-4xl lg:text-6xl max-w-2xl">Tan simple como debe ser.</h2>
         </FadeUp>
-        <div className="mt-20 grid md:grid-cols-3 gap-14 lg:gap-20">
+        <div className="mt-20 grid md:grid-cols-4 gap-14 lg:gap-20">
           {steps.map((s, i) => (
             <FadeUp key={s.n} delay={i * 120}>
               <div className="border-t border-charcoal/15 pt-8">
@@ -175,6 +214,11 @@ function HowItWorks() {
             </FadeUp>
           ))}
         </div>
+        <FadeUp>
+          <p className="text-center text-charcoal/55 italic text-sm mt-16">
+            Todo incluido. USD $29 por mes.
+          </p>
+        </FadeUp>
       </div>
     </section>
   );
@@ -185,24 +229,23 @@ function Pricing() {
     <section id="suscripcion" className="bg-cream-deep py-28 lg:py-40">
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         <FadeUp>
-          <p className="eyebrow mb-6">Suscripción</p>
-          <h2 className="text-charcoal text-4xl lg:text-6xl max-w-2xl">Simple y transparente</h2>
+          <p className="eyebrow mb-6">Membresía</p>
+          <h2 className="text-charcoal text-4xl lg:text-6xl max-w-2xl">Una obra en tu hogar. Por menos de lo que cuesta una cena afuera.</h2>
         </FadeUp>
         <div className="mt-16 grid md:grid-cols-2 gap-8">
           <FadeUp>
             <div className="bg-cream border-2 border-terracotta p-10 lg:p-12 h-full flex flex-col">
-              <p className="eyebrow mb-6">Suscripción</p>
+              <p className="eyebrow mb-6">Membresía Cvall</p>
               <div className="flex items-baseline gap-2">
                 <span className="font-serif text-6xl lg:text-7xl text-charcoal">USD $29</span>
                 <span className="text-charcoal/60">/ mes</span>
               </div>
-              <p className="text-charcoal/60 text-sm mt-2">Facturado como USD $174 cada 6 meses</p>
               <ul className="mt-10 space-y-4 text-charcoal/85 font-light">
                 {[
-                  "1 obra original cada 6 meses",
-                  "Envío incluido (ida y vuelta)",
+                  "Una obra original cada 6 meses",
+                  "Envío incluido, ida y vuelta",
                   "Caja de transporte reutilizable",
-                  "20% de descuento para comprar la obra",
+                  "20% de descuento si decidís quedártela para siempre",
                 ].map((f) => (
                   <li key={f} className="flex gap-3">
                     <span className="text-terracotta mt-1">·</span>
@@ -214,7 +257,7 @@ function Pricing() {
                 href="#contacto"
                 className="mt-12 inline-flex items-center justify-center bg-terracotta hover:bg-terracotta-dark text-cream px-8 py-4 text-sm tracking-[0.18em] uppercase rounded-[2px] transition-colors"
               >
-                Suscribirme
+                Quiero suscribirme
               </a>
             </div>
           </FadeUp>
@@ -222,6 +265,9 @@ function Pricing() {
             <div className="border border-charcoal/30 p-10 lg:p-12 h-full flex flex-col">
               <p className="eyebrow text-charcoal/70 mb-6">Compra directa</p>
               <h3 className="font-serif text-4xl text-charcoal">Comprá una obra</h3>
+              <p className="text-charcoal/85 text-sm mt-4 font-light">
+                Las obras también están disponibles para compra directa.
+              </p>
               <ul className="mt-8 space-y-4 text-charcoal/85 font-light">
                 <li className="flex justify-between border-b border-charcoal/10 pb-3">
                   <span>Obras pequeñas</span><span className="text-charcoal/60">desde USD $150</span>
@@ -233,7 +279,7 @@ function Pricing() {
                   <span>Obras grandes</span><span className="text-charcoal/60">desde USD $500</span>
                 </li>
               </ul>
-              <p className="text-charcoal/60 text-sm mt-8 leading-relaxed">
+              <p className="text-charcoal/55 italic text-sm mt-8 leading-relaxed">
                 Suscriptores activos tienen 20% de descuento automático.
               </p>
               <a
@@ -247,9 +293,6 @@ function Pricing() {
             </div>
           </FadeUp>
         </div>
-        <p className="text-charcoal/55 italic text-sm text-center mt-10 max-w-xl mx-auto">
-          Los precios se actualizan por período. El pago se coordina directamente con Cvall.
-        </p>
       </div>
     </section>
   );
@@ -322,18 +365,31 @@ function About() {
         <FadeUp className="order-2 lg:order-1">
           <p className="eyebrow mb-6">La artista</p>
           <h2 className="text-cream text-4xl lg:text-6xl leading-tight">
-            La mente detrás<br />de Cvall
+            Nací en Brandsen.<br />
+            Pinto en Samborombón.<br />
+            Y hace un tiempo entendí que mis cuadros necesitaban salir.
           </h2>
           <div className="mt-10 space-y-6 text-cream/80 font-light text-lg leading-relaxed max-w-xl">
             <p>
-              Valeria Candiago crea en su taller de campo en Brandsen, Buenos Aires. Cada obra nace en el silencio del campo y termina colgada en un hogar.
+              Soy artista plástica, docente, madre de cinco.<br />
+              Trabajo con acrílico, aerosoles y arte fluido en mi atelier<br />
+              rodeado de campo y silencio.
             </p>
             <p>
-              Cvall no tiene una galería tradicional. Crea una forma de que el arte circule, de que las paredes cambien, de que la belleza no se quede quieta.
+              Siempre pinté en abstracto porque el abstracto no miente.<br />
+              No representa nada que ya exista — te obliga a traer<br />
+              algo tuyo para completarlo.
+            </p>
+            <p>
+              Cvall no es una galería. No es una tienda.<br />
+              Es mi forma de dejar algo en el mundo más allá de lo que ya dejé.
             </p>
           </div>
           <p className="mt-10 italic text-terracotta">
-            Atelier de Campo — Brandsen, Argentina
+            Ya que estamos de paso, dejemos huellas bonitas.
+          </p>
+          <p className="mt-4 text-cream/85 font-light">
+            — Valeria Luciana Candiago
           </p>
         </FadeUp>
         <FadeUp delay={150} className="order-1 lg:order-2">
@@ -363,10 +419,14 @@ function Contact() {
       <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center">
         <FadeUp>
           <h2 className="font-serif text-4xl lg:text-6xl leading-tight text-cream">
-            ¿Querés una obra de Cvall en tu hogar?
+            Hay una obra esperando<br />
+            las paredes de<br />
+            tu casa.
           </h2>
           <p className="mt-6 text-cream/85 text-lg font-light">
-            Escribinos y te contamos todo.
+            No para siempre.<br />
+            Solo por un tiempo.<br />
+            Que es exactamente como funciona todo lo que vale la pena.
           </p>
         </FadeUp>
         <FadeUp delay={150}>
@@ -399,7 +459,7 @@ function Footer() {
         <div>
           <Logo className="h-10 w-auto text-cream" />
           <p className="italic text-sm mt-4 text-cream/60">
-            Valeria Candiago | Atelier de Campo
+            Valeria Candiago · Atelier de Campo · Samborombón, Buenos Aires
           </p>
         </div>
         <nav className="flex flex-col gap-3 md:items-center">
@@ -427,6 +487,9 @@ function Footer() {
         </div>
       </div>
       <div className="mt-16 text-center text-xs text-cream/40 tracking-wider">
+        Ya que estamos de paso, dejemos huellas bonitas.
+      </div>
+      <div className="mt-4 text-center text-xs text-cream/40 tracking-wider">
         © 2025 Cvall · Arte original · Buenos Aires, Argentina
       </div>
     </footer>
@@ -439,6 +502,7 @@ function Landing() {
       <Nav />
       <main>
         <Hero />
+        <Concept />
         <HowItWorks />
         <Pricing />
         <Gallery />
