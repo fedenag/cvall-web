@@ -2,12 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { FadeUp } from "@/components/FadeUp";
 import heroImg from "@/assets/hero.jpg";
-import art1 from "@/assets/art1.jpg";
-import art2 from "@/assets/art2.jpg";
-import art3 from "@/assets/art3.jpg";
-import art4 from "@/assets/art4.jpg";
-import art5 from "@/assets/art5.jpg";
-import art6 from "@/assets/art6.jpg";
+import cuadro1 from "@/assets/cuadro-1.jpg";
+import cuadro2 from "@/assets/cuadro-2.jpg";
+import cuadro3 from "@/assets/cuadro-3.jpg";
+import cuadro4 from "@/assets/cuadro-4.jpg";
+import cuadro5 from "@/assets/cuadro-5.jpg";
+import cuadro6 from "@/assets/cuadro-6.jpg";
+import cuadro7 from "@/assets/cuadro-7.jpg";
+import cuadro8 from "@/assets/cuadro-8.jpg";
 
 export const Route = createFileRoute("/")({
   component: Landing,
@@ -253,13 +255,15 @@ function Pricing() {
   );
 }
 
-const works = [
-  { img: art1, title: "Mediodía en el patio", dim: "70 × 90 cm · acrílico", status: "available" },
-  { img: art2, title: "Horizonte ocre", dim: "60 × 60 cm · acrílico", status: "circulating" },
-  { img: art3, title: "Campo en silencio", dim: "80 × 100 cm · acrílico", status: "available" },
-  { img: art4, title: "Gesto rojo", dim: "50 × 50 cm · acrílico", status: "available" },
-  { img: art5, title: "Capas de tierra", dim: "70 × 100 cm · acrílico", status: "circulating" },
-  { img: art6, title: "Luna sobre el monte", dim: "65 × 80 cm · acrílico", status: "available" },
+const obras = [
+  { img: cuadro1, title: "Obra de Atelier", dim: "70 × 90 cm", technique: "acrílico", status: "available" },
+  { img: cuadro2, title: "Obra de Atelier", dim: "60 × 60 cm", technique: "acrílico", status: "circulating" },
+  { img: cuadro3, title: "Obra de Atelier", dim: "80 × 100 cm", technique: "acrílico", status: "available" },
+  { img: cuadro4, title: "Obra de Atelier", dim: "50 × 50 cm", technique: "acrílico", status: "available" },
+  { img: cuadro5, title: "Obra de Atelier", dim: "70 × 100 cm", technique: "acrílico", status: "circulating" },
+  { img: cuadro6, title: "Obra de Atelier", dim: "65 × 80 cm", technique: "acrílico", status: "available" },
+  { img: cuadro7, title: "Obra de Atelier", dim: "70 × 90 cm", technique: "acrílico", status: "circulating" },
+  { img: cuadro8, title: "Obra de Atelier", dim: "60 × 60 cm", technique: "acrílico", status: "available" },
 ];
 
 function Gallery() {
@@ -271,8 +275,8 @@ function Gallery() {
           <h2 className="text-charcoal text-4xl lg:text-6xl">Obras disponibles</h2>
         </FadeUp>
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-          {works.map((w, i) => (
-            <FadeUp key={w.title} delay={(i % 3) * 100}>
+          {obras.map((w, i) => (
+            <FadeUp key={i} delay={(i % 3) * 100}>
               <figure className="group cursor-pointer">
                 <div className="relative overflow-hidden bg-cream-deep aspect-[4/5]">
                   <img
@@ -290,7 +294,7 @@ function Gallery() {
                 <figcaption className="mt-5 flex items-start justify-between gap-4">
                   <div>
                     <h3 className="font-serif text-2xl text-charcoal leading-tight">{w.title}</h3>
-                    <p className="text-charcoal/55 text-sm mt-1">{w.dim}</p>
+                    <p className="text-charcoal/55 text-sm mt-1">{w.dim} · {w.technique}</p>
                   </div>
                   <span
                     className={`shrink-0 mt-1 text-[0.65rem] tracking-[0.18em] uppercase px-3 py-1 rounded-full ${
