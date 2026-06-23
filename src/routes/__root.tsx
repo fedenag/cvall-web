@@ -90,6 +90,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dae14cd0-f27d-4764-a94a-d66157651e83/id-preview-2a303f48--4b647fdc-5941-4995-8736-f0678db90b68.lovable.app-1781996850065.png" },
     ],
     links: [
+      { rel: "icon", type: "image/svg+xml", href: "/cvalllogo.svg" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
