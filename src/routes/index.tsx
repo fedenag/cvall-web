@@ -432,7 +432,7 @@ function Contact() {
         <FadeUp delay={150}>
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/5491100000000"
+              href="https://wa.me/5492223464934"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center bg-cream text-charcoal hover:bg-cream/90 px-8 py-4 text-sm tracking-[0.18em] uppercase rounded-[2px] transition-colors"
@@ -440,7 +440,7 @@ function Contact() {
               Escribir por WhatsApp
             </a>
             <a
-              href="mailto:contacto@cvall.art"
+              href="mailto:candiagovaleria@gmail.com"
               className="inline-flex items-center justify-center border border-cream text-cream hover:bg-cream/10 px-8 py-4 text-sm tracking-[0.18em] uppercase rounded-[2px] transition-colors"
             >
               Enviar un mail
