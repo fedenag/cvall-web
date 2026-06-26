@@ -321,7 +321,7 @@ const obras = [
   { img: cuadro14, title: "Alegria (Serie 5-10)", dim: "40 x 50 cm", technique: "Acrílico", status: "available" },
 ];
 
-function Gallery() {
+function Gallery({ onSelectObra }: { onSelectObra: (obra: typeof obras[0]) => void }) {
   return (
     <section id="galeria" className="bg-cream py-28 lg:py-40">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -332,7 +332,7 @@ function Gallery() {
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {obras.map((w, i) => (
             <FadeUp key={i} delay={(i % 3) * 100}>
-              <figure className="group cursor-pointer">
+              <figure className="group cursor-pointer" onClick={() => onSelectObra(w)}>
                 <div className="relative overflow-hidden bg-cream-deep aspect-[4/5]">
                   <img
                     src={w.img}
@@ -358,7 +358,7 @@ function Gallery() {
                         : "bg-terracotta/15 text-terracotta-dark"
                     }`}
                   >
-                    {w.status === "available" ? "Disponible" : "En circulación"}
+                    {w.status === "available" ? "Disponible" : "En rotación activa"}
                   </span>
                 </figcaption>
               </figure>
@@ -367,6 +367,79 @@ function Gallery() {
         </div>
       </div>
     </section>
+  );
+}
+
+function Lightbox({ obra, onClose }: { obra: typeof obras[0]; onClose: () => void }) {
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleEsc);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+      document.body.style.overflow = "unset";
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] bg-charcoal-deep/95 flex items-center justify-center p-4"
+      onClick={onClose}
+    >
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 md:top-8 md:right-8 text-cream hover:text-terracotta transition-colors"
+        aria-label="Cerrar"
+      >
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div
+        className="max-w-5xl w-full bg-cream rounded-[2px] overflow-hidden flex flex-col lg:flex-row"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="lg:w-2/3 bg-cream-deep flex items-center justify-center p-4">
+          <img
+            src={obra.img}
+            alt={obra.title}
+            className="max-h-[70vh] w-auto h-auto object-contain"
+          />
+        </div>
+        <div className="lg:w-1/3 p-6 lg:p-8 flex flex-col">
+          <div className="flex items-start justify-between gap-4 mb-6">
+            <h2 className="font-serif text-3xl lg:text-4xl text-charcoal leading-tight">
+              {obra.title}
+            </h2>
+            <span
+              className={`shrink-0 text-[0.65rem] tracking-[0.18em] uppercase px-3 py-1 rounded-full ${
+                obra.status === "available"
+                  ? "bg-olive/15 text-olive"
+                  : "bg-terracotta/15 text-terracotta-dark"
+              }`}
+            >
+              {obra.status === "available" ? "Disponible" : "En rotación activa"}
+            </span>
+          </div>
+          <div className="space-y-3 text-charcoal/85 font-light">
+            <p>Medidas: {obra.dim}</p>
+            <p>Técnica: {obra.technique}</p>
+          </div>
+          <div className="mt-auto pt-8">
+            <a
+              href="#contacto"
+              onClick={onClose}
+              className="inline-flex items-center justify-center bg-terracotta hover:bg-terracotta-dark text-cream px-6 py-3 text-sm tracking-[0.18em] uppercase rounded-[2px] transition-colors"
+            >
+              Contactar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -509,6 +582,8 @@ function Footer() {
 }
 
 function Landing() {
+  const [obraSeleccionada, setObraSeleccionada] = useState<typeof obras[0] | null>(null);
+
   return (
     <div className="bg-cream text-charcoal">
       <Nav />
@@ -517,11 +592,17 @@ function Landing() {
         <Concept />
         <HowItWorks />
         <Pricing />
-        <Gallery />
+        <Gallery onSelectObra={setObraSeleccionada} />
         <About />
         <Contact />
       </main>
       <Footer />
+      {obraSeleccionada && (
+        <Lightbox
+          obra={obraSeleccionada}
+          onClose={() => setObraSeleccionada(null)}
+        />
+      )}
     </div>
   );
 }
