@@ -10,6 +10,12 @@ import cuadro5 from "@/assets/cuadro-5.jpg";
 import cuadro6 from "@/assets/cuadro-6.jpg";
 import cuadro7 from "@/assets/cuadro-7.jpg";
 import cuadro8 from "@/assets/cuadro-8.jpg";
+import cuadro9 from "@/assets/cuadro-9.jpg";
+import cuadro10 from "@/assets/cuadro-10.jpg";
+import cuadro11 from "@/assets/cuadro-11.jpg";
+import cuadro12 from "@/assets/cuadro-12.jpg";
+import cuadro13 from "@/assets/cuadro-13.jpg";
+import cuadro14 from "@/assets/cuadro-14.jpg";
 
 export const Route = createFileRoute("/")({
   component: Landing,
@@ -299,14 +305,20 @@ function Pricing() {
 }
 
 const obras = [
-  { img: cuadro1, title: "Obra de Atelier", dim: "70 × 90 cm", technique: "acrílico", status: "available" },
-  { img: cuadro2, title: "Obra de Atelier", dim: "60 × 60 cm", technique: "acrílico", status: "circulating" },
-  { img: cuadro3, title: "Obra de Atelier", dim: "80 × 100 cm", technique: "acrílico", status: "available" },
-  { img: cuadro4, title: "Obra de Atelier", dim: "50 × 50 cm", technique: "acrílico", status: "available" },
-  { img: cuadro5, title: "Obra de Atelier", dim: "70 × 100 cm", technique: "acrílico", status: "circulating" },
-  { img: cuadro6, title: "Obra de Atelier", dim: "65 × 80 cm", technique: "acrílico", status: "available" },
-  { img: cuadro7, title: "Obra de Atelier", dim: "70 × 90 cm", technique: "acrílico", status: "circulating" },
-  { img: cuadro8, title: "Obra de Atelier", dim: "60 × 60 cm", technique: "acrílico", status: "available" },
+  { img: cuadro1, title: "Alegria (Serie 1-10)", dim: "40 x 50 cm", technique: "Acrílico", status: "available" },
+  { img: cuadro2, title: "El diablo viste a la moda (Serie 1-10)", dim: "50 x 60 cm", technique: "Acrílico", status: "available" },
+  { img: cuadro3, title: "El diablo viste a la moda (Serie 2-10)", dim: "50 x 60 cm", technique: "Acrílico", status: "available" },
+  { img: cuadro4, title: "Alegria (Serie 4-10)", dim: "40 x 50 cm", technique: "Acrílico", status: "available" },
+  { img: cuadro5, title: "Caos", dim: "50 x 60 cm", technique: "Acrílico", status: "available" },
+  { img: cuadro6, title: "Sin título", dim: "A confirmar", technique: "Acrílico", status: "available" },
+  { img: cuadro7, title: "Alegria (Serie 2-10)", dim: "40 x 50 cm", technique: "Acrílico", status: "available" },
+  { img: cuadro8, title: "Sin título", dim: "A confirmar", technique: "Acrílico", status: "available" },
+  { img: cuadro9, title: "El diablo viste a la moda (Serie 3-10)", dim: "50 x 50 cm", technique: "Acrílico", status: "available" },
+  { img: cuadro10, title: "El diablo viste a la moda (Serie 4-10)", dim: "50 x 50 cm", technique: "Acrílico", status: "available" },
+  { img: cuadro11, title: "Señales (Díptico 1)", dim: "30 x 70 cm", technique: "Acrílico", status: "available" },
+  { img: cuadro12, title: "Señales (Díptico 2)", dim: "30 x 70 cm", technique: "Acrílico", status: "available" },
+  { img: cuadro13, title: "Alegria (Serie 4-10)", dim: "40 x 50 cm", technique: "Acrílico", status: "available" },
+  { img: cuadro14, title: "Alegria (Serie 5-10)", dim: "40 x 50 cm", technique: "Acrílico", status: "available" },
 ];
 
 function Gallery() {
