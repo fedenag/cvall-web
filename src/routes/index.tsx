@@ -557,7 +557,7 @@ function Footer() {
     <footer className="bg-charcoal-deep text-cream/70 py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid md:grid-cols-3 gap-12 items-start">
         <div>
-          <Logo className="h-10 w-auto text-cream" />
+          <Logo className="h-10 w-auto brightness-0 invert" />
           <p className="italic text-sm mt-4 text-cream/60">
             Valeria Candiago · Atelier de Campo · Samborombón, Buenos Aires, Argentina
           </p>
