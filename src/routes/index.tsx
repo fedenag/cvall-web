@@ -175,7 +175,7 @@ function Concept() {
               Después llega otra. Y la que se va, visita a alguien más.
             </p>
             <p>
-              Así es como algo hecho en un taller de campo termina dejando<br />
+              Así es como algo hecho en un atelier de campo termina dejando<br />
               huella en lugares que nunca imaginé.
             </p>
           </div>
