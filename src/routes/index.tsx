@@ -16,6 +16,13 @@ import cuadro11 from "@/assets/cuadro-11.jpg";
 import cuadro12 from "@/assets/cuadro-12.jpg";
 import cuadro13 from "@/assets/cuadro-13.jpg";
 import cuadro14 from "@/assets/cuadro-14.jpg";
+import cuadro15 from "@/assets/cuadro-15.jpg";
+import cuadro16 from "@/assets/cuadro-16.jpg";
+import cuadro17 from "@/assets/cuadro-17.jpg";
+import cuadro18 from "@/assets/cuadro-18.jpg";
+import cuadro19 from "@/assets/cuadro-19.jpg";
+import cuadro20 from "@/assets/cuadro-20.jpg";
+import cuadro21 from "@/assets/cuadro-21.jpg";
 
 export const Route = createFileRoute("/")({
   component: Landing,
@@ -319,13 +326,13 @@ const obras = [
   { img: cuadro12, title: "Señales", dim: "30 x 70 cm", series: "Díptico 2", technique: "Acrílico", status: "available" },
   { img: cuadro13, title: "Alegria", dim: "40 x 50 cm", series: "Serie 4-10", technique: "Acrílico", status: "available" },
   { img: cuadro14, title: "Alegria", dim: "40 x 50 cm", series: "Serie 5-10", technique: "Acrílico", status: "available" },
-  { img: cuadro1, title: "Alegria", dim: "60 x 60 cm", series: "Serie 8-10", technique: "Aerosografía", status: "available" },
-  { img: cuadro2, title: "El diablo viste a la moda", dim: "60 x 80 cm", series: "Serie 5-10", technique: "Acrílico", status: "available" },
-  { img: cuadro3, title: "Profundidad", dim: "50 x 70 cm", series: null, technique: "Acrílico y aerosografía", status: "available" },
-  { img: cuadro4, title: "Alegria", dim: "50 x 60 cm", series: "Serie 7-10", technique: "Acrílico", status: "available" },
-  { img: cuadro5, title: "Alegria", dim: "60 x 60 cm", series: "Serie 8-10", technique: "Acrílico y aerosografía", status: "available" },
-  { img: cuadro6, title: "Coronado", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
-  { img: cuadro7, title: "Plumaje Real", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
+  { img: cuadro15, title: "Alegria", dim: "60 x 60 cm", series: "Serie 8-10", technique: "Aerosografía", status: "available" },
+  { img: cuadro16, title: "El diablo viste a la moda", dim: "60 x 80 cm", series: "Serie 5-10", technique: "Acrílico", status: "available" },
+  { img: cuadro17, title: "Profundidad", dim: "50 x 70 cm", series: null, technique: "Acrílico y aerosografía", status: "available" },
+  { img: cuadro18, title: "Alegria", dim: "50 x 60 cm", series: "Serie 7-10", technique: "Acrílico", status: "available" },
+  { img: cuadro19, title: "Alegria", dim: "60 x 60 cm", series: "Serie 8-10", technique: "Acrílico y aerosografía", status: "available" },
+  { img: cuadro20, title: "Coronado", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
+  { img: cuadro21, title: "Plumaje Real", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
 ];
 
 function Gallery({ onSelectObra }: { onSelectObra: (obra: typeof obras[0]) => void }) {
