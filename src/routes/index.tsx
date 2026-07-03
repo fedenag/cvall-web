@@ -305,20 +305,27 @@ function Pricing() {
 }
 
 const obras = [
-  { img: cuadro1, title: "Alegria (Serie 1-10)", dim: "40 x 50 cm", technique: "Acrílico", status: "available" },
-  { img: cuadro2, title: "El diablo viste a la moda (Serie 1-10)", dim: "50 x 60 cm", technique: "Acrílico", status: "available" },
-  { img: cuadro3, title: "El diablo viste a la moda (Serie 2-10)", dim: "50 x 60 cm", technique: "Acrílico", status: "available" },
-  { img: cuadro4, title: "Alegria (Serie 4-10)", dim: "40 x 50 cm", technique: "Acrílico", status: "available" },
-  { img: cuadro5, title: "Caos", dim: "50 x 60 cm", technique: "Acrílico", status: "available" },
-  { img: cuadro6, title: "Sin título", dim: "A confirmar", technique: "Acrílico", status: "available" },
-  { img: cuadro7, title: "Alegria (Serie 2-10)", dim: "40 x 50 cm", technique: "Acrílico", status: "available" },
-  { img: cuadro8, title: "Sin título", dim: "A confirmar", technique: "Acrílico", status: "available" },
-  { img: cuadro9, title: "El diablo viste a la moda (Serie 3-10)", dim: "50 x 50 cm", technique: "Acrílico", status: "available" },
-  { img: cuadro10, title: "El diablo viste a la moda (Serie 4-10)", dim: "50 x 50 cm", technique: "Acrílico", status: "available" },
-  { img: cuadro11, title: "Señales (Díptico 1)", dim: "30 x 70 cm", technique: "Acrílico", status: "available" },
-  { img: cuadro12, title: "Señales (Díptico 2)", dim: "30 x 70 cm", technique: "Acrílico", status: "available" },
-  { img: cuadro13, title: "Alegria (Serie 4-10)", dim: "40 x 50 cm", technique: "Acrílico", status: "available" },
-  { img: cuadro14, title: "Alegria (Serie 5-10)", dim: "40 x 50 cm", technique: "Acrílico", status: "available" },
+  { img: cuadro1, title: "Alegria", dim: "50 x 60 cm", series: "Serie 1-10", technique: "Acrílico", status: "available" },
+  { img: cuadro2, title: "El diablo viste a la moda", dim: "50 x 60 cm", series: "Serie 1-10", technique: "Acrílico", status: "available" },
+  { img: cuadro3, title: "El diablo viste a la moda", dim: "50 x 60 cm", series: "Serie 2-10", technique: "Acrílico", status: "available" },
+  { img: cuadro4, title: "Alegria", dim: "40 x 50 cm", series: "Serie 4-10", technique: "Acrílico", status: "available" },
+  { img: cuadro5, title: "Caos", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
+  { img: cuadro6, title: "Alegria", dim: "50 x 60 cm", series: "Serie 6-10", technique: "Acrílico", status: "available" },
+  { img: cuadro7, title: "Alegria", dim: "40 x 50 cm", series: "Serie 2-10", technique: "Acrílico", status: "available" },
+  { img: cuadro8, title: "Sin título", dim: null, series: null, technique: "Acrílico", status: "available" },
+  { img: cuadro9, title: "El diablo viste a la moda", dim: "50 x 50 cm", series: "Serie 3-10", technique: "Acrílico", status: "available" },
+  { img: cuadro10, title: "El diablo viste a la moda", dim: "50 x 50 cm", series: "Serie 4-10", technique: "Acrílico", status: "available" },
+  { img: cuadro11, title: "Señales", dim: "30 x 70 cm", series: "Díptico 1", technique: "Acrílico", status: "available" },
+  { img: cuadro12, title: "Señales", dim: "30 x 70 cm", series: "Díptico 2", technique: "Acrílico", status: "available" },
+  { img: cuadro13, title: "Alegria", dim: "40 x 50 cm", series: "Serie 4-10", technique: "Acrílico", status: "available" },
+  { img: cuadro14, title: "Alegria", dim: "40 x 50 cm", series: "Serie 5-10", technique: "Acrílico", status: "available" },
+  { img: cuadro1, title: "Alegria", dim: "60 x 60 cm", series: "Serie 8-10", technique: "Aerosografía", status: "available" },
+  { img: cuadro2, title: "El diablo viste a la moda", dim: "60 x 80 cm", series: "Serie 5-10", technique: "Acrílico", status: "available" },
+  { img: cuadro3, title: "Profundidad", dim: "50 x 70 cm", series: null, technique: "Acrílico y aerosografía", status: "available" },
+  { img: cuadro4, title: "Alegria", dim: "50 x 60 cm", series: "Serie 7-10", technique: "Acrílico", status: "available" },
+  { img: cuadro5, title: "Alegria", dim: "60 x 60 cm", series: "Serie 8-10", technique: "Acrílico y aerosografía", status: "available" },
+  { img: cuadro6, title: "Coronado", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
+  { img: cuadro7, title: "Plumaje Real", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
 ];
 
 function Gallery({ onSelectObra }: { onSelectObra: (obra: typeof obras[0]) => void }) {
@@ -349,7 +356,11 @@ function Gallery({ onSelectObra }: { onSelectObra: (obra: typeof obras[0]) => vo
                 <figcaption className="mt-5 flex items-start justify-between gap-4">
                   <div>
                     <h3 className="font-serif text-2xl text-charcoal leading-tight">{w.title}</h3>
-                    <p className="text-charcoal/55 text-sm mt-1">{w.dim} · {w.technique}</p>
+                    <p className="text-charcoal/55 text-sm mt-1">
+                      {w.dim && `${w.dim} · `}
+                      {w.technique}
+                      {w.series && ` · ${w.series}`}
+                    </p>
                   </div>
                   <span
                     className={`shrink-0 mt-1 text-[0.65rem] tracking-[0.18em] uppercase px-3 py-1 rounded-full ${
@@ -425,7 +436,8 @@ function Lightbox({ obra, onClose }: { obra: typeof obras[0]; onClose: () => voi
             </span>
           </div>
           <div className="space-y-3 text-charcoal/85 font-light">
-            <p>Medidas: {obra.dim}</p>
+            {obra.dim && <p>Medidas: {obra.dim}</p>}
+            {obra.series && <p>Serie: {obra.series}</p>}
             <p>Técnica: {obra.technique}</p>
           </div>
           <div className="mt-auto pt-8">
