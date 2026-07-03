@@ -203,7 +203,7 @@ const steps = [
   },
   {
     n: "04",
-    title: "Rota",
+    title: "Circula",
     body: "Coordinamos la devolución y viene la siguiente. La que se va sigue viajando.",
   },
 ];
@@ -559,7 +559,7 @@ function Footer() {
         <div>
           <Logo className="h-10 w-auto text-cream" />
           <p className="italic text-sm mt-4 text-cream/60">
-            Valeria Candiago · Atelier de Campo · Samborombón, Buenos Aires
+            Valeria Candiago · Atelier de Campo · Samborombón, Buenos Aires, Argentina
           </p>
         </div>
         <nav className="flex flex-col gap-3 md:items-center">
