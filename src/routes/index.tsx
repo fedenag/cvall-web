@@ -245,10 +245,10 @@ function Pricing() {
           <p className="eyebrow mb-6">Membresía</p>
           <h2 className="text-charcoal text-4xl lg:text-6xl max-w-2xl">Una obra en tu hogar. Por menos de lo que cuesta una cena afuera.</h2>
         </FadeUp>
-        <div className="mt-16 grid md:grid-cols-2 gap-8">
-          <FadeUp>
+        <div className="mt-16">
+          <FadeUp className="mx-auto max-w-[600px]">
             <div className="bg-cream border-2 border-terracotta p-10 lg:p-12 h-full flex flex-col">
-              <p className="eyebrow mb-6">Membresía Cvall</p>
+              <p className="eyebrow mb-6 text-terracotta">MEMBRESÍA CVALL</p>
               <div className="flex items-baseline gap-2">
                 <span className="font-serif text-6xl lg:text-7xl text-charcoal">USD $29</span>
                 <span className="text-charcoal/60">/ mes</span>
@@ -258,54 +258,40 @@ function Pricing() {
                   "Una obra original cada 6 meses",
                   "Envío incluido, ida y vuelta",
                   "Caja de transporte reutilizable",
-                  "20% de descuento si decidís quedártela para siempre",
-                ].map((f) => (
-                  <li key={f} className="flex gap-3">
+                ].map((f, i) => (
+                  <li key={i} className="flex gap-3">
                     <span className="text-terracotta mt-1">·</span>
                     <span>{f}</span>
                   </li>
                 ))}
               </ul>
+              <p className="mt-8 text-terracotta italic font-light">
+                ✦ Pagá los 6 meses de una y el sexto te lo regalamos — USD $145 por período.
+              </p>
               <a
                 href="#contacto"
-                className="mt-12 inline-flex items-center justify-center bg-terracotta hover:bg-terracotta-dark text-cream px-8 py-4 text-sm tracking-[0.18em] uppercase rounded-[2px] transition-colors"
+                className="mt-10 inline-flex items-center justify-center bg-terracotta hover:bg-terracotta-dark text-cream px-8 py-4 text-sm tracking-[0.18em] uppercase rounded-[2px] transition-colors"
               >
-                Quiero suscribirme
-              </a>
-            </div>
-          </FadeUp>
-          <FadeUp delay={120}>
-            <div className="border border-charcoal/30 p-10 lg:p-12 h-full flex flex-col">
-              <p className="eyebrow text-charcoal/70 mb-6">Compra directa</p>
-              <h3 className="font-serif text-4xl text-charcoal">Comprá una obra</h3>
-              <p className="text-charcoal/85 text-sm mt-4 font-light">
-                Las obras también están disponibles para compra directa.
-              </p>
-              <ul className="mt-8 space-y-4 text-charcoal/85 font-light">
-                <li className="flex justify-between border-b border-charcoal/10 pb-3">
-                  <span>Obras pequeñas</span><span className="text-charcoal/60">desde USD $150</span>
-                </li>
-                <li className="flex justify-between border-b border-charcoal/10 pb-3">
-                  <span>Obras medianas</span><span className="text-charcoal/60">desde USD $300</span>
-                </li>
-                <li className="flex justify-between border-b border-charcoal/10 pb-3">
-                  <span>Obras grandes</span><span className="text-charcoal/60">desde USD $500</span>
-                </li>
-              </ul>
-              <p className="text-charcoal/55 italic text-sm mt-8 leading-relaxed">
-                Suscriptores activos tienen 20% de descuento automático.
-              </p>
-              <a
-                href="#galeria"
-                className="mt-auto pt-12 inline-flex"
-              >
-                <span className="inline-flex items-center justify-center border border-charcoal text-charcoal hover:bg-charcoal hover:text-cream px-8 py-4 text-sm tracking-[0.18em] uppercase rounded-[2px] transition-colors">
-                  Ver galería
-                </span>
+                QUIERO SUSCRIBIRME
               </a>
             </div>
           </FadeUp>
         </div>
+        <FadeUp className="mt-12 text-center">
+          <div className="bg-cream/60 border border-charcoal/10 p-6 rounded-[2px] mx-auto max-w-[600px]">
+            <p className="text-charcoal/85 font-light mb-1">¿Tenés una empresa, estudio u oficina?</p>
+            <p className="text-charcoal/85 font-light mb-1">Para múltiples obras tenemos condiciones especiales.</p>
+            <p className="text-charcoal/85 font-light mb-4">Escribinos y lo charlamos.</p>
+            <a
+              href="https://wa.me/5492223464934"
+              target="_blank"
+              rel="noreferrer"
+              className="text-terracotta hover:text-terracotta-dark text-sm tracking-[0.18em] uppercase transition-colors"
+            >
+              Contactanos →
+            </a>
+          </div>
+        </FadeUp>
       </div>
     </section>
   );
