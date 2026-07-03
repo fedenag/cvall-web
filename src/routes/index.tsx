@@ -220,7 +220,7 @@ function HowItWorks() {
           {steps.map((s, i) => (
             <FadeUp key={s.n} delay={i * 120}>
               <div className="border-t border-charcoal/15 pt-8">
-                <div className="text-terracotta text-5xl lg:text-6xl mb-8 font-sans">{s.n}</div>
+                <div className="text-terracotta text-5xl lg:text-6xl mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>{s.n}</div>
                 <h3 className="text-charcoal text-2xl lg:text-3xl mb-4">{s.title}</h3>
                 <p className="text-charcoal/70 font-light leading-relaxed">{s.body}</p>
               </div>
