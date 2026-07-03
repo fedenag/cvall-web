@@ -527,13 +527,22 @@ function Contact() {
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center bg-cream text-charcoal hover:bg-cream/90 px-8 py-4 text-sm tracking-[0.18em] uppercase rounded-[2px] transition-colors"
+              aria-label="WhatsApp"
             >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="mr-2">
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.096.544 4.084 1.488 5.824L0 24l6.264-1.624A11.916 11.916 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm6.584 16.912c-.28.788-1.576 1.492-2.184 1.512-.376.012-.86.016-1.396-.092-.316-.064-.724-.184-1.244-.36-2.196-.74-3.64-2.436-3.756-2.556-.116-.12-.96-1.244-.96-2.38 0-1.132.492-1.68.672-1.912.18-.232.396-.288.528-.288.132 0 .264.004.38.02.124.016.324-.048.504.372.2.48.684 1.656.744 1.776.06.12.1.256.016.408-.084.152-.132.252-.264.384-.132.132-.272.3-.388.404-.136.124-.276.26-.124.512.152.256 0 0 .68.38 0 0 2.096.98 3.364 1.208.268.048.536.072.756.072.664 0 1.668-.252 2.068-1.544.4-1.296.4-2.412.288-2.66-.112-.248-.932-.572-1.928-1.088-1.364-.712-2.34-1.16-2.544-1.36-.204-.2-.644-.484-1.012-.484-.896 0-1.584.748-1.584 1.856 0 1.108.412 1.564.504 1.68.092.116 1.068 1.62 1.164 2.068.092.436.184.372.52.228.336-.144 1.184-.484 1.964-.968.776-.48 1.356-.624 1.564-.604.208.02.328.128.4.312.072.184.072 1.024-.212 1.812z"/>
+              </svg>
               Escribir por WhatsApp
             </a>
             <a
               href="mailto:candiagovaleria@gmail.com"
               className="inline-flex items-center justify-center border border-cream text-cream hover:bg-cream/10 px-8 py-4 text-sm tracking-[0.18em] uppercase rounded-[2px] transition-colors"
+              aria-label="Email"
             >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="mr-2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
               Enviar un mail
             </a>
           </div>
@@ -561,20 +570,6 @@ function Footer() {
           ))}
         </nav>
         <div className="md:text-right">
-          <p className="text-sm tracking-[0.18em] uppercase mb-4">Seguinos</p>
-          <a
-            href="https://instagram.com/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Instagram"
-            className="inline-flex items-center justify-center w-10 h-10 border border-cream/30 rounded-full hover:border-terracotta hover:text-terracotta transition-colors md:ml-auto"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <rect x="3" y="3" width="18" height="18" rx="5" />
-              <circle cx="12" cy="12" r="4" />
-              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
-            </svg>
-          </a>
         </div>
       </div>
       <div className="mt-16 text-center text-xs text-cream/40 tracking-wider">
