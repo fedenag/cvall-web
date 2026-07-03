@@ -20,7 +20,6 @@ import cuadro15 from "@/assets/cuadro-15.jpg";
 import cuadro16 from "@/assets/cuadro-16.jpg";
 import cuadro17 from "@/assets/cuadro-17.jpg";
 import cuadro18 from "@/assets/cuadro-18.jpg";
-import cuadro19 from "@/assets/cuadro-19.jpg";
 import cuadro20 from "@/assets/cuadro-20.jpg";
 import cuadro21 from "@/assets/cuadro-21.jpg";
 
@@ -299,25 +298,24 @@ function Pricing() {
 }
 
 const obras = [
-  { img: cuadro1, title: "Alegria", dim: "50 x 60 cm", series: "Serie 1-10", technique: "Acrílico", status: "available" },
+  { img: cuadro1, title: "Alegría", dim: "50 x 60 cm", series: "Serie 1-10", technique: "Acrílico", status: "available" },
   { img: cuadro2, title: "El diablo viste a la moda", dim: "50 x 60 cm", series: "Serie 1-10", technique: "Acrílico", status: "available" },
   { img: cuadro3, title: "El diablo viste a la moda", dim: "50 x 60 cm", series: "Serie 2-10", technique: "Acrílico", status: "available" },
-  { img: cuadro4, title: "Alegria", dim: "40 x 50 cm", series: "Serie 4-10", technique: "Acrílico", status: "available" },
+  { img: cuadro4, title: "Alegría", dim: "40 x 50 cm", series: "Serie 4-10", technique: "Acrílico", status: "available" },
   { img: cuadro5, title: "Caos", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
-  { img: cuadro6, title: "Alegria", dim: "50 x 60 cm", series: "Serie 6-10", technique: "Acrílico", status: "available" },
-  { img: cuadro7, title: "Alegria", dim: "40 x 50 cm", series: "Serie 2-10", technique: "Acrílico", status: "available" },
+  { img: cuadro6, title: "Alegría", dim: "50 x 60 cm", series: "Serie 6-10", technique: "Acrílico", status: "available" },
+  { img: cuadro7, title: "Alegría", dim: "40 x 50 cm", series: "Serie 2-10", technique: "Acrílico", status: "available" },
   { img: cuadro8, title: "Sin título", dim: null, series: null, technique: "Acrílico", status: "available" },
   { img: cuadro9, title: "El diablo viste a la moda", dim: "50 x 50 cm", series: "Serie 3-10", technique: "Acrílico", status: "available" },
   { img: cuadro10, title: "El diablo viste a la moda", dim: "50 x 50 cm", series: "Serie 4-10", technique: "Acrílico", status: "available" },
   { img: cuadro11, title: "Señales", dim: "30 x 70 cm", series: "Díptico 1", technique: "Acrílico", status: "available" },
   { img: cuadro12, title: "Señales", dim: "30 x 70 cm", series: "Díptico 2", technique: "Acrílico", status: "available" },
-  { img: cuadro13, title: "Alegria", dim: "40 x 50 cm", series: "Serie 4-10", technique: "Acrílico", status: "available" },
-  { img: cuadro14, title: "Alegria", dim: "40 x 50 cm", series: "Serie 5-10", technique: "Acrílico", status: "available" },
-  { img: cuadro15, title: "Alegria", dim: "60 x 60 cm", series: "Serie 8-10", technique: "Aerosografía", status: "available" },
+  { img: cuadro13, title: "Alegría", dim: "40 x 50 cm", series: "Serie 4-10", technique: "Acrílico", status: "available" },
+  { img: cuadro14, title: "Alegría", dim: "40 x 50 cm", series: "Serie 5-10", technique: "Acrílico", status: "available" },
+  { img: cuadro15, title: "Alegría", dim: "60 x 60 cm", series: "Serie 8-10", technique: "Aerosografía", status: "available" },
   { img: cuadro16, title: "El diablo viste a la moda", dim: "60 x 80 cm", series: "Serie 5-10", technique: "Acrílico", status: "available" },
   { img: cuadro17, title: "Profundidad", dim: "50 x 70 cm", series: null, technique: "Acrílico y aerosografía", status: "available" },
-  { img: cuadro18, title: "Alegria", dim: "50 x 60 cm", series: "Serie 7-10", technique: "Acrílico", status: "available" },
-  { img: cuadro19, title: "Alegria", dim: "60 x 60 cm", series: "Serie 8-10", technique: "Acrílico y aerosografía", status: "available" },
+  { img: cuadro18, title: "Alegría", dim: "50 x 60 cm", series: "Serie 7-10", technique: "Acrílico", status: "available" },
   { img: cuadro20, title: "Coronado", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
   { img: cuadro21, title: "Plumaje Real", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
 ];
