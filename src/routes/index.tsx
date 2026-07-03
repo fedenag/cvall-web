@@ -243,7 +243,8 @@ function Pricing() {
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         <FadeUp>
           <p className="eyebrow mb-6">Membresía</p>
-          <h2 className="text-charcoal text-4xl lg:text-6xl max-w-2xl">Una obra en tu hogar. Por menos de lo que cuesta una cena afuera.</h2>
+          <h2 className="text-charcoal font-serif text-4xl lg:text-6xl leading-tight">Una obra original en tu espacio. 
+            Por menos de lo que cuesta una salida al teatro.</h2>
         </FadeUp>
         <div className="mt-16">
           <FadeUp className="mx-auto max-w-[600px]">
