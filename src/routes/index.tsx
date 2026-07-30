@@ -22,6 +22,8 @@ import cuadro17 from "@/assets/cuadro-17.jpg";
 import cuadro18 from "@/assets/cuadro-18.jpg";
 import cuadro20 from "@/assets/cuadro-20.jpg";
 import cuadro21 from "@/assets/cuadro-21.jpg";
+import cuadro22 from "@/assets/cuadro-22.jpg";
+import cuadro23 from "@/assets/cuadro-23.jpg";
 
 export const Route = createFileRoute("/")({
   component: Landing,
@@ -318,6 +320,8 @@ const obras = [
   { img: cuadro18, title: "Alegría", dim: "50 x 60 cm", series: "Serie 7-10", technique: "Acrílico", status: "available" },
   { img: cuadro20, title: "Coronado", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
   { img: cuadro21, title: "Plumaje Real", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
+  { img: cuadro22, title: "Corazones Argentinos", dim: "50 x 70 cm", series: "Serie 1-3", technique: "Acrílico", status: "available" },
+  { img: cuadro23, title: "Chorreón", dim: "50 x 70 cm", series: null, technique: "Aerosografía y acrílico", status: "available" },
 ];
 
 function Gallery({ onSelectObra }: { onSelectObra: (obra: typeof obras[0]) => void }) {
