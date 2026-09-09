@@ -328,8 +328,8 @@ const obras = [
   { img: cuadro23, title: "Chorreón", dim: "50 x 70 cm", series: null, technique: "Aerosografía y acrílico", status: "available" },
   { img: cuadro24, title: "PUESTA DE SOL", dim: "40x120 cm", series: null, technique: "Acrílico", status: "available" },
   { img: cuadro25, title: "CHISPAS DE ALEGRÍA", dim: "50x70 cm", series: null, technique: "Acrílico", status: "circulando" },
-  { img: cuadro26, title: "SOFISTICADO", dim: "60x110 cm", series: null, technique: "Tríptico en Aerosol fluido", status: "available" },
-  { img: cuadro27, title: "MULTICOLOR", dim: "40x100 cm", series: null, technique: "Tríptico en Acrílico", status: "available" },
+  { img: cuadro26, title: "SOFISTICADO", dim: "60x110 cm", series: null, technique: "Tríptico en Aerosol fluido", status: "available", isWide: true },
+  { img: cuadro27, title: "MULTICOLOR", dim: "40x100 cm", series: null, technique: "Tríptico en Acrílico", status: "available", isWide: true },
 ];
 
 function Gallery({ onSelectObra }: { onSelectObra: (obra: typeof obras[0]) => void }) {
@@ -342,14 +342,14 @@ function Gallery({ onSelectObra }: { onSelectObra: (obra: typeof obras[0]) => vo
         </FadeUp>
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {obras.map((w, i) => (
-            <FadeUp key={i} delay={(i % 3) * 100}>
+            <FadeUp key={i} delay={(i % 3) * 100} className={w.isWide ? "col-span-full" : ""}>
               <figure className="group cursor-pointer" onClick={() => onSelectObra(w)}>
-                <div className="relative overflow-hidden bg-cream-deep aspect-[4/5]">
+                <div className={`relative overflow-hidden bg-cream-deep ${w.isWide ? "aspect-[16/6] max-h-96" : "aspect-[4/5]"}`}>
                   <img
                     src={w.img}
                     alt={w.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
+                    className={`w-full h-full transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04] ${w.isWide ? "object-contain" : "object-cover"}`}
                   />
                   <div className="absolute inset-0 bg-charcoal-deep/0 group-hover:bg-charcoal-deep/40 transition-colors duration-500 flex items-end p-6">
                     <span className="text-cream opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-sm tracking-[0.18em] uppercase">
