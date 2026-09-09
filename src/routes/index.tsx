@@ -327,7 +327,7 @@ const obras = [
   { img: cuadro22, title: "Corazones Argentinos", dim: "50 x 70 cm", series: "Serie 1-3", technique: "Acrílico", status: "available" },
   { img: cuadro23, title: "Chorreón", dim: "50 x 70 cm", series: null, technique: "Aerosografía y acrílico", status: "available" },
   { img: cuadro24, title: "PUESTA DE SOL", dim: "40x120 cm", series: null, technique: "Acrílico", status: "available" },
-  { img: cuadro25, title: "CHISPAS DE ALEGRÍA", dim: "50x70 cm", series: null, technique: "Acrílico", status: "available" },
+  { img: cuadro25, title: "CHISPAS DE ALEGRÍA", dim: "50x70 cm", series: null, technique: "Acrílico", status: "circulando" },
   { img: cuadro26, title: "SOFISTICADO", dim: "60x110 cm", series: null, technique: "Tríptico en Aerosol fluido", status: "available" },
   { img: cuadro27, title: "MULTICOLOR", dim: "40x100 cm", series: null, technique: "Tríptico en Acrílico", status: "available" },
 ];
