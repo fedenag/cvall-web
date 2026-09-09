@@ -303,7 +303,17 @@ function Pricing() {
   );
 }
 
-const obras = [
+type Obra = {
+  img: string;
+  title: string;
+  dim: string | null;
+  series: string | null;
+  technique: string;
+  status: "available" | "circulando" | (string & {});
+  isWide?: boolean;
+};
+
+const obras: Obra[] = [
   { img: cuadro1, title: "Alegría", dim: "50 x 60 cm", series: "Serie 1-10", technique: "Acrílico", status: "available" },
   { img: cuadro2, title: "El diablo viste a la moda", dim: "50 x 60 cm", series: "Serie 1-10", technique: "Acrílico", status: "available" },
   { img: cuadro3, title: "El diablo viste a la moda", dim: "50 x 60 cm", series: "Serie 2-10", technique: "Acrílico", status: "available" },
@@ -332,7 +342,7 @@ const obras = [
   { img: cuadro27, title: "MULTICOLOR", dim: "40x100 cm", series: null, technique: "Tríptico en Acrílico", status: "available", isWide: true },
 ];
 
-function Gallery({ onSelectObra }: { onSelectObra: (obra: typeof obras[0]) => void }) {
+function Gallery({ onSelectObra }: { onSelectObra: (obra: Obra) => void }) {
   return (
     <section id="galeria" className="bg-cream py-28 lg:py-40">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -385,7 +395,7 @@ function Gallery({ onSelectObra }: { onSelectObra: (obra: typeof obras[0]) => vo
   );
 }
 
-function Lightbox({ obra, onClose }: { obra: typeof obras[0]; onClose: () => void }) {
+function Lightbox({ obra, onClose }: { obra: Obra; onClose: () => void }) {
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -593,7 +603,7 @@ function Footer() {
 }
 
 function Landing() {
-  const [obraSeleccionada, setObraSeleccionada] = useState<typeof obras[0] | null>(null);
+  const [obraSeleccionada, setObraSeleccionada] = useState<Obra | null>(null);
 
   return (
     <div className="bg-cream text-charcoal">
