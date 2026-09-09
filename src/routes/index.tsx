@@ -373,7 +373,7 @@ function Gallery({ onSelectObra }: { onSelectObra: (obra: typeof obras[0]) => vo
                         : "bg-terracotta/15 text-terracotta-dark"
                     }`}
                   >
-                    {w.status === "available" ? "Disponible" : "En rotación activa"}
+                    {w.status === "available" ? "Disponible" : "CIRCULANDO"}
                   </span>
                 </figcaption>
               </figure>
@@ -436,7 +436,7 @@ function Lightbox({ obra, onClose }: { obra: typeof obras[0]; onClose: () => voi
                   : "bg-terracotta/15 text-terracotta-dark"
               }`}
             >
-              {obra.status === "available" ? "Disponible" : "En rotación activa"}
+              {obra.status === "available" ? "Disponible" : "CIRCULANDO"}
             </span>
           </div>
           <div className="space-y-3 text-charcoal/85 font-light">
