@@ -303,17 +303,7 @@ function Pricing() {
   );
 }
 
-type Obra = {
-  img: string;
-  title: string;
-  dim: string | null;
-  series: string | null;
-  technique: string;
-  status: "available" | "circulando" | (string & {});
-  isWide?: boolean;
-};
-
-const obras: Obra[] = [
+const obras = [
   { img: cuadro1, title: "Alegría", dim: "50 x 60 cm", series: "Serie 1-10", technique: "Acrílico", status: "available" },
   { img: cuadro2, title: "El diablo viste a la moda", dim: "50 x 60 cm", series: "Serie 1-10", technique: "Acrílico", status: "available" },
   { img: cuadro3, title: "El diablo viste a la moda", dim: "50 x 60 cm", series: "Serie 2-10", technique: "Acrílico", status: "available" },
@@ -338,11 +328,11 @@ const obras: Obra[] = [
   { img: cuadro23, title: "Chorreón", dim: "50 x 70 cm", series: null, technique: "Aerosografía y acrílico", status: "available" },
   { img: cuadro24, title: "PUESTA DE SOL", dim: "40x120 cm", series: null, technique: "Acrílico", status: "available" },
   { img: cuadro25, title: "CHISPAS DE ALEGRÍA", dim: "50x70 cm", series: null, technique: "Acrílico", status: "circulando" },
-  { img: cuadro26, title: "SOFISTICADO", dim: "60x110 cm", series: null, technique: "Tríptico en Aerosol fluido", status: "available", isWide: true },
-  { img: cuadro27, title: "MULTICOLOR", dim: "40x100 cm", series: null, technique: "Tríptico en Acrílico", status: "available", isWide: true },
+  { img: cuadro26, title: "SOFISTICADO", dim: "60x110 cm", series: null, technique: "Tríptico en Aerosol fluido", status: "available" },
+  { img: cuadro27, title: "MULTICOLOR", dim: "40x100 cm", series: null, technique: "Tríptico en Acrílico", status: "available" },
 ];
 
-function Gallery({ onSelectObra }: { onSelectObra: (obra: Obra) => void }) {
+function Gallery({ onSelectObra }: { onSelectObra: (obra: typeof obras[0]) => void }) {
   return (
     <section id="galeria" className="bg-cream py-28 lg:py-40">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -352,16 +342,15 @@ function Gallery({ onSelectObra }: { onSelectObra: (obra: Obra) => void }) {
         </FadeUp>
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {obras.map((w, i) => (
-            <div key={i} className={`${w.isWide ? "col-span-full" : ""}`}>
-              <FadeUp delay={(i % 3) * 100}>
-                <figure className="group cursor-pointer" onClick={() => onSelectObra(w)}>
-                  <div className={`relative overflow-hidden bg-cream-deep ${w.isWide ? "aspect-[16/6] max-h-96" : "aspect-[4/5]"}`}>
-                    <img
-                      src={w.img}
-                      alt={w.title}
-                      loading="lazy"
-                      className={`w-full h-full transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04] ${w.isWide ? "object-contain" : "object-cover"}`}
-                    />
+            <FadeUp key={i} delay={(i % 3) * 100}>
+              <figure className="group cursor-pointer" onClick={() => onSelectObra(w)}>
+                <div className="relative overflow-hidden bg-cream-deep aspect-[4/5]">
+                  <img
+                    src={w.img}
+                    alt={w.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
+                  />
                   <div className="absolute inset-0 bg-charcoal-deep/0 group-hover:bg-charcoal-deep/40 transition-colors duration-500 flex items-end p-6">
                     <span className="text-cream opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-sm tracking-[0.18em] uppercase">
                       Ver obra →
@@ -388,8 +377,7 @@ function Gallery({ onSelectObra }: { onSelectObra: (obra: Obra) => void }) {
                   </span>
                 </figcaption>
               </figure>
-              </FadeUp>
-            </div>
+            </FadeUp>
           ))}
         </div>
       </div>
@@ -397,7 +385,7 @@ function Gallery({ onSelectObra }: { onSelectObra: (obra: Obra) => void }) {
   );
 }
 
-function Lightbox({ obra, onClose }: { obra: Obra; onClose: () => void }) {
+function Lightbox({ obra, onClose }: { obra: typeof obras[0]; onClose: () => void }) {
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -605,7 +593,7 @@ function Footer() {
 }
 
 function Landing() {
-  const [obraSeleccionada, setObraSeleccionada] = useState<Obra | null>(null);
+  const [obraSeleccionada, setObraSeleccionada] = useState<typeof obras[0] | null>(null);
 
   return (
     <div className="bg-cream text-charcoal">
