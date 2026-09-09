@@ -24,6 +24,10 @@ import cuadro20 from "@/assets/cuadro-20.jpg";
 import cuadro21 from "@/assets/cuadro-21.jpg";
 import cuadro22 from "@/assets/cuadro-22.jpg";
 import cuadro23 from "@/assets/cuadro-23.jpg";
+import cuadro24 from "@/assets/cuadro-24.jpg";
+import cuadro25 from "@/assets/cuadro-25.jpg";
+import cuadro26 from "@/assets/cuadro-26.jpg";
+import cuadro27 from "@/assets/cuadro-27.jpg";
 
 export const Route = createFileRoute("/")({
   component: Landing,
@@ -307,7 +311,7 @@ const obras = [
   { img: cuadro5, title: "Caos", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
   { img: cuadro6, title: "Alegría", dim: "50 x 60 cm", series: "Serie 6-10", technique: "Acrílico", status: "available" },
   { img: cuadro7, title: "Alegría", dim: "40 x 50 cm", series: "Serie 2-10", technique: "Acrílico", status: "available" },
-  { img: cuadro8, title: "Sin título", dim: null, series: null, technique: "Acrílico", status: "available" },
+  { img: cuadro8, title: "TAPIZ", dim: "50x65 cm", series: null, technique: "Acrílico en papel misionero", status: "available" },
   { img: cuadro9, title: "El diablo viste a la moda", dim: "50 x 50 cm", series: "Serie 3-10", technique: "Acrílico", status: "available" },
   { img: cuadro10, title: "El diablo viste a la moda", dim: "50 x 50 cm", series: "Serie 4-10", technique: "Acrílico", status: "available" },
   { img: cuadro11, title: "Señales", dim: "30 x 70 cm", series: "Díptico 1", technique: "Acrílico", status: "available" },
@@ -322,6 +326,10 @@ const obras = [
   { img: cuadro21, title: "Plumaje Real", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
   { img: cuadro22, title: "Corazones Argentinos", dim: "50 x 70 cm", series: "Serie 1-3", technique: "Acrílico", status: "available" },
   { img: cuadro23, title: "Chorreón", dim: "50 x 70 cm", series: null, technique: "Aerosografía y acrílico", status: "available" },
+  { img: cuadro24, title: "PUESTA DE SOL", dim: "40x120 cm", series: null, technique: "Acrílico", status: "available" },
+  { img: cuadro25, title: "CHISPAS DE ALEGRÍA", dim: "50x70 cm", series: null, technique: "Acrílico", status: "available" },
+  { img: cuadro26, title: "SOFISTICADO", dim: "60x110 cm", series: null, technique: "Tríptico en Aerosol fluido", status: "available" },
+  { img: cuadro27, title: "MULTICOLOR", dim: "40x100 cm", series: null, technique: "Tríptico en Acrílico", status: "available" },
 ];
 
 function Gallery({ onSelectObra }: { onSelectObra: (obra: typeof obras[0]) => void }) {
