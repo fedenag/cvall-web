@@ -310,7 +310,7 @@ const obras = [
   { img: cuadro4, title: "Alegría", dim: "40 x 50 cm", series: "Serie 4-10", technique: "Acrílico", status: "available" },
   { img: cuadro5, title: "Caos", dim: "50 x 60 cm", series: null, technique: "Acrílico", status: "available" },
   { img: cuadro6, title: "Alegría", dim: "50 x 60 cm", series: "Serie 6-10", technique: "Acrílico", status: "available" },
-  { img: cuadro7, title: "Alegría", dim: "40 x 50 cm", series: "Serie 2-10", technique: "Acrílico", status: "available" },
+  { img: cuadro7, title: "Alegría", dim: "40 x 50 cm", series: "Serie 2-10", technique: "Acrílico", status: "circulando" },
   { img: cuadro8, title: "TAPIZ", dim: "50x65 cm", series: null, technique: "Acrílico en papel misionero", status: "available" },
   { img: cuadro9, title: "El diablo viste a la moda", dim: "50 x 50 cm", series: "Serie 3-10", technique: "Acrílico", status: "available" },
   { img: cuadro10, title: "El diablo viste a la moda", dim: "50 x 50 cm", series: "Serie 4-10", technique: "Acrílico", status: "available" },
@@ -328,7 +328,7 @@ const obras = [
   { img: cuadro23, title: "Chorreón", dim: "50 x 70 cm", series: null, technique: "Aerosografía y acrílico", status: "available" },
   { img: cuadro24, title: "PUESTA DE SOL", dim: "40x120 cm", series: null, technique: "Acrílico", status: "available" },
   { img: cuadro25, title: "CHISPAS DE ALEGRÍA", dim: "50x70 cm", series: null, technique: "Acrílico", status: "circulando" },
-  { img: cuadro26, title: "SOFISTICADO", dim: "60x110 cm", series: null, technique: "Tríptico en Aerosol fluido", status: "available" },
+  { img: cuadro26, title: "SOFISTICADO", dim: "60x110 cm", series: null, technique: "Tríptico en Aerosol fluido", status: "circulando" },
   { img: cuadro27, title: "MULTICOLOR", dim: "40x100 cm", series: null, technique: "Tríptico en Acrílico", status: "available" },
 ];
 
