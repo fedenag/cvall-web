@@ -28,6 +28,12 @@ import cuadro24 from "@/assets/cuadro-24.jpg";
 import cuadro25 from "@/assets/cuadro-25.jpg";
 import cuadro26 from "@/assets/cuadro-26.jpg";
 import cuadro27 from "@/assets/cuadro-27.jpg";
+import cuadro28 from "@/assets/cuadro-28.jpg";
+import cuadro29 from "@/assets/cuadro-29.jpg";
+import cuadro30 from "@/assets/cuadro-30.jpg";
+import cuadro31 from "@/assets/cuadro-31.jpg";
+import cuadro32 from "@/assets/cuadro-32.jpg";
+import cuadro33 from "@/assets/cuadro-33.jpg";
 
 export const Route = createFileRoute("/")({
   component: Landing,
@@ -330,6 +336,12 @@ const obras = [
   { img: cuadro25, title: "CHISPAS DE ALEGRÍA", dim: "50x70 cm", series: null, technique: "Acrílico", status: "circulando" },
   { img: cuadro26, title: "SOFISTICADO", dim: "60x110 cm", series: null, technique: "Tríptico en Aerosol fluido", status: "circulando" },
   { img: cuadro27, title: "MULTICOLOR", dim: "40x100 cm", series: null, technique: "Tríptico en Acrílico", status: "available" },
+  { img: cuadro28, title: "ORIGEN", dim: "50x60 cm", series: null, technique: "Acrílico con espátula", status: "available" },
+  { img: cuadro29, title: "Corazones Argentinos", dim: "50x70 cm", series: "Serie 2-3", technique: "Acrílico", status: "available" },
+  { img: cuadro30, title: "Corazones Argentinos", dim: "40x50 cm", series: "Serie 3-3", technique: "Acrílico", status: "available" },
+  { img: cuadro31, title: "MAPA DE RUTAS", dim: "60x80 cm", series: null, technique: "Acrílico y aerosol", status: "available" },
+  { img: cuadro32, title: "CROQUIS", dim: "50x70 cm", series: null, technique: "Acrílico con espátula", status: "available" },
+  { img: cuadro33, title: "MAREA", dim: "50x70 cm", series: null, technique: "Acrílico y aerosol", status: "available" },
 ];
 
 function Gallery({ onSelectObra }: { onSelectObra: (obra: typeof obras[0]) => void }) {
